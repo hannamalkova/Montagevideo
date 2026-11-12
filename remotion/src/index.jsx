@@ -4,6 +4,7 @@ import {
   registerRoot, Composition, AbsoluteFill, OffthreadVideo, Sequence, Audio,
   staticFile, useVideoConfig,
 } from 'remotion';
+import {Animals, animalsDefault, animalsDuration, ANIMALS_FPS} from './animals';
 
 const FPS = 30;
 const YELLOW = '#EBC620';
@@ -59,6 +60,7 @@ const Trener = ({trimStart, lineAt, listAt}) => {
 };
 
 const Root = () => (
+  <>
   <Composition
     id="Trener"
     component={Trener}
@@ -68,6 +70,17 @@ const Root = () => (
     durationInFrames={Math.round(10.35 * FPS)}
     defaultProps={{trimStart: 0.1, lineAt: 4.65, listAt: 6.9}}
   />
+  <Composition
+    id="Animals"
+    component={Animals}
+    fps={ANIMALS_FPS}
+    width={1080}
+    height={1920}
+    durationInFrames={animalsDuration(animalsDefault)}
+    defaultProps={animalsDefault}
+    calculateMetadata={({props}) => ({durationInFrames: animalsDuration(props)})}
+  />
+  </>
 );
 
 registerRoot(Root);
