@@ -8,13 +8,17 @@ const f = (s) => Math.round(s * ANIMALS_FPS);
 export const animalsDefault = {
   caption: '👥 не привчай його спати з тобою',
   captionUntil: 2.7,
-  music: 'animals/music.wav',
+  music: 'animals/music_ext.wav',
   clips: [
     {src: 'animals/open.mp4', from: 1.0, dur: 2.7},
     {src: 'animals/swan_wide_up.mp4', from: 0, dur: 1.3667},
     {src: 'animals/swan_close_up.mp4', from: 0, dur: 1.2},
     {src: 'animals/polarbear_up.mp4', from: 0, dur: 1.9},
     {src: 'animals/koala_up.mp4', from: 0, dur: 2.9333},
+    // New animals (Wikimedia Commons, CC licences), one music bar (2.868 s) each
+    {src: 'animals/elephant.mp4', from: 2.0, dur: 2.868},
+    {src: 'animals/panda_up.mp4', from: 0.3, dur: 2.868},
+    {src: 'animals/zebra_up.mp4', from: 0.4, dur: 2.868},
     {src: 'animals/otter_up.mp4', from: 0, dur: 3.0},
   ],
 };

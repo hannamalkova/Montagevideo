@@ -8,7 +8,7 @@ m = spandrel.ModelLoader().load_from_file(model_path).eval()
 info = subprocess.run(["ffprobe","-v","error","-select_streams","v:0","-show_entries","stream=width,height,r_frame_rate","-of","csv=p=0",src],capture_output=True,text=True).stdout.strip().split(",")
 w, h, fr = int(info[0]), int(info[1]), info[2]
 # work at 540x960 input -> x4 = 2160x3840 -> down to 1080x1920 (cleaner than 720p x4)
-iw, ih = 540, 960
+iw, ih = (540, 960) if w >= 540 else (w - w % 2, h - h % 2)
 dec = subprocess.Popen(["ffmpeg","-v","error","-i",src,"-vf",f"scale={iw}:{ih}:flags=area","-f","rawvideo","-pix_fmt","rgb24","-"],stdout=subprocess.PIPE)
 enc = subprocess.Popen(["ffmpeg","-v","error","-y","-f","rawvideo","-pix_fmt","rgb24","-s","1080x1920","-r",fr,"-i","-",
     "-c:v","libx264","-crf","14","-preset","medium","-pix_fmt","yuv420p",out],stdin=subprocess.PIPE)
