@@ -7,3 +7,6 @@ models/
 *.mov
 *.jpg
 renders/
+source/
+*.MOV
+*.MP4
