@@ -46,7 +46,7 @@ const Trener = ({trimStart, lineAt, listAt}) => {
       <Sequence from={f(lineAt)} durationInFrames={f(listAt) - f(lineAt)}>
         <div style={{position: 'absolute', left: 0, right: 0, top: 368, textAlign: 'center',
           ...font, fontWeight: 700, color: YELLOW}}>
-          – Тренерко, я загубив капці
+          – Сенсейко, я загубив капці
         </div>
       </Sequence>
       <Sequence from={f(listAt)} durationInFrames={durationInFrames - f(listAt)}>
@@ -63,8 +63,8 @@ const Root = () => (
     fps={FPS}
     width={1080}
     height={1920}
-    durationInFrames={Math.round(8.3 * FPS)}
-    defaultProps={{trimStart: 2.7, lineAt: 2.5, listAt: 4.3}}
+    durationInFrames={Math.round(11.0 * FPS)}
+    defaultProps={{trimStart: 0, lineAt: 5.2, listAt: 7.0}}
   />
 );
 
