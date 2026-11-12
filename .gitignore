@@ -1,0 +1,9 @@
+.venv/
+node_modules/
+models/
+.cache/
+*.log
+*.mp4
+*.mov
+*.jpg
+renders/
