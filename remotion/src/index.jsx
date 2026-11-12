@@ -1,7 +1,7 @@
 import '@fontsource/montserrat/600.css';
 import '@fontsource/montserrat/700.css';
 import {
-  registerRoot, Composition, AbsoluteFill, OffthreadVideo, Sequence,
+  registerRoot, Composition, AbsoluteFill, OffthreadVideo, Sequence, Audio,
   staticFile, useVideoConfig,
 } from 'remotion';
 
@@ -39,7 +39,9 @@ const Trener = ({trimStart, lineAt, listAt}) => {
   ];
   return (
     <AbsoluteFill style={{backgroundColor: 'black'}}>
-      <OffthreadVideo src={staticFile('IMG_4243_1080.mp4')} startFrom={f(trimStart)} />
+      <OffthreadVideo src={staticFile('IMG_4243_1080.mp4')} startFrom={f(trimStart)} muted />
+      {/* Reference track, extended by 4 intro beats so its drop lands on the kid's line */}
+      <Audio src={staticFile('music_ext.wav')} />
       <Sequence durationInFrames={f(lineAt)}>
         <List items={base} top={308} />
       </Sequence>
