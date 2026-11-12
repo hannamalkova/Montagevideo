@@ -10,3 +10,6 @@ renders/
 source/
 *.MOV
 *.MP4
+work/
+output/
+remotion/public/

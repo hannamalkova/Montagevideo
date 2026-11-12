@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/hannamalkova/Montagevideo#readme",
   "dependencies": {
+    "@fontsource/montserrat": "^5.3.0",
     "@remotion/bundler": "^4.0.543",
     "@remotion/cli": "^4.0.543",
     "@remotion/renderer": "^4.0.543",
