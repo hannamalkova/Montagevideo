@@ -8,18 +8,16 @@ const f = (s) => Math.round(s * ANIMALS_FPS);
 export const animalsDefault = {
   caption: '👥 не привчай його спати з тобою',
   captionUntil: 2.7,
-  music: 'animals/music_ext.wav',
+  music: 'animals/music_v3.wav',
   clips: [
     {src: 'animals/open.mp4', from: 1.0, dur: 2.7},
     {src: 'animals/swan_wide_up.mp4', from: 0, dur: 1.3667},
-    {src: 'animals/swan_close_up.mp4', from: 0, dur: 1.2},
-    {src: 'animals/polarbear_up.mp4', from: 0, dur: 1.9},
+    {src: 'animals/polarbear_up.mp4', from: 0, dur: 1.9, zoom: 1.3, origin: '40% 47%'},
     {src: 'animals/koala_up.mp4', from: 0, dur: 2.9333},
-    // New animals (Wikimedia Commons, CC licences), one music bar (2.868 s) each
-    {src: 'animals/elephant.mp4', from: 2.0, dur: 2.868},
-    {src: 'animals/panda_up.mp4', from: 0.3, dur: 2.868},
-    {src: 'animals/zebra_up.mp4', from: 0.4, dur: 2.868},
-    {src: 'animals/otter_up.mp4', from: 0, dur: 3.0},
+    // New animals (Wikimedia Commons, CC licences)
+    {src: 'animals/elephant.mp4', from: 2.0, dur: 3.2},
+    {src: 'animals/panda_up.mp4', from: 0.3, dur: 3.2},
+    {src: 'animals/zebra_up.mp4', from: 0.2, dur: 3.5},
   ],
 };
 
@@ -35,7 +33,8 @@ export const Animals = ({caption, captionUntil, music, clips}) => {
         return (
           <Sequence key={i} from={start} durationInFrames={f(c.dur)}>
             <OffthreadVideo src={staticFile(c.src)} startFrom={f(c.from)} muted
-              style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+              style={{width: '100%', height: '100%', objectFit: 'cover',
+                transform: `scale(${c.zoom || 1})`, transformOrigin: c.origin || '50% 50%'}} />
           </Sequence>
         );
       })}
