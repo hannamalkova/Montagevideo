@@ -39,9 +39,9 @@ const Trener = ({trimStart, lineAt, listAt}) => {
   ];
   return (
     <AbsoluteFill style={{backgroundColor: 'black'}}>
-      <OffthreadVideo src={staticFile('IMG_4243_1080.mp4')} startFrom={f(trimStart)} muted />
-      {/* Reference track, extended by 4 intro beats so its drop lands on the kid's line */}
-      <Audio src={staticFile('music_ext.wav')} />
+      <OffthreadVideo src={staticFile('IMG_4243_stab_slow.mp4')} startFrom={f(trimStart)} muted />
+      {/* Reference track, extended by 3 intro beats so its drop lands on the kid's line */}
+      <Audio src={staticFile('music_v4.wav')} />
       <Sequence durationInFrames={f(lineAt)}>
         <List items={base} top={308} />
       </Sequence>
@@ -65,8 +65,8 @@ const Root = () => (
     fps={FPS}
     width={1080}
     height={1920}
-    durationInFrames={Math.round(11.0 * FPS)}
-    defaultProps={{trimStart: 0, lineAt: 5.2, listAt: 7.0}}
+    durationInFrames={Math.round(10.35 * FPS)}
+    defaultProps={{trimStart: 1.85, lineAt: 4.65, listAt: 6.9}}
   />
 );
 
