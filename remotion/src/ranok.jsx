@@ -17,8 +17,9 @@ export const ranokDefault = {
   shots: [
     {src: 'ranok/intro.mp4', from: 0.5, at: 0, until: 3.133},
     {src: 'ranok/water.mp4', from: 0.5, at: 3.133, until: 4.067},
-    {src: 'ranok/ball.mp4', from: 0.5, at: 4.067, until: 5.467},
-    {src: 'ranok/kids.mp4', from: 0.5, at: 5.467, until: 16.433},
+    {src: 'ranok/ball.mp4', from: 0.35, at: 4.067, until: 5.467},   // ball toss, not the wrist glance
+    {src: 'ranok/kids.mp4', from: 3.0, at: 5.467, until: 10.733},   // first kid runs in and hugs
+    {src: 'ranok/allkids.mp4', from: 0.5, at: 10.733, until: 16.433}, // all four kids, with the heart
   ],
   captions: [
     {at: 0, until: 3.133, lines: ['3 речі, без яких я не готова', 'починати свій ранок?']},
