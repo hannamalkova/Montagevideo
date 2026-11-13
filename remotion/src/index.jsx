@@ -4,6 +4,7 @@ import {
   registerRoot, Composition, AbsoluteFill, OffthreadVideo, Sequence, Audio,
   staticFile, useVideoConfig,
 } from 'remotion';
+import {Behind, behindDefault, behindDuration, BEHIND_FPS} from './behind';
 import {Ranok, ranokDefault, ranokDuration, RANOK_FPS} from './ranok';
 import {Mama, mamaDefault, mamaDuration, MAMA_FPS} from './mama';
 import {Animals, animalsDefault, animalsDuration, ANIMALS_FPS} from './animals';
@@ -99,6 +100,15 @@ const Root = () => (
     height={1920}
     durationInFrames={ranokDuration(ranokDefault)}
     defaultProps={ranokDefault}
+  />
+  <Composition
+    id="Behind"
+    component={Behind}
+    fps={BEHIND_FPS}
+    width={1080}
+    height={1920}
+    durationInFrames={behindDuration(behindDefault)}
+    defaultProps={behindDefault}
   />
   </>
 );
