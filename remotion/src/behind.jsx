@@ -84,7 +84,7 @@ export const Behind = ({question, words, hitAt, freezeFor, zoom, color}) => {
         </AbsoluteFill>
       )}
       <Sequence from={hit}>
-        <Audio src={staticFile('behind/boom.wav')} volume={0.9} />
+        <Audio src={staticFile('behind/boom.wav')} volume={1} />
       </Sequence>
 
       <Sequence from={f(question.from)} durationInFrames={f(question.until) - f(question.from)}>
