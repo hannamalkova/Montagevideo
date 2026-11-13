@@ -17,9 +17,12 @@ export const ranokDefault = {
   shots: [
     {src: 'ranok/intro.mp4', from: 0.5, at: 0, until: 3.133},
     {src: 'ranok/water.mp4', from: 0.5, at: 3.133, until: 4.067},
-    {src: 'ranok/ball.mp4', from: 0.35, at: 4.067, until: 5.467},   // ball toss, not the wrist glance
-    {src: 'ranok/kids.mp4', from: 3.0, at: 5.467, until: 10.733},   // first kid runs in and hugs
-    {src: 'ranok/allkids.mp4', from: 0.5, at: 10.733, until: 16.433}, // all four kids, with the heart
+    {src: 'ranok/ball_orig.mp4', from: 0.5, at: 4.067, until: 5.467},
+    // kids_full.mp4 starts at 4.0 s of IMG_4154; kids join one by one
+    {src: 'ranok/kids_full.mp4', from: 0.8, at: 5.467, until: 7.733},   // 1st: daughter runs in (~5.5 s)
+    {src: 'ranok/kids_full.mp4', from: 7.3, at: 7.733, until: 9.233},   // 2nd: boy in yellow (~11.5 s)
+    {src: 'ranok/kids_full.mp4', from: 12.3, at: 9.233, until: 10.733}, // 3rd: boy in black (~16.5 s)
+    {src: 'ranok/kids_full.mp4', from: 16.4, at: 10.733, until: 16.433}, // 4th: boy in white (~20.5 s), heart
   ],
   captions: [
     {at: 0, until: 3.133, lines: ['3 речі, без яких я не готова', 'починати свій ранок?']},
