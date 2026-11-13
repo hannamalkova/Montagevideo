@@ -22,7 +22,7 @@ export const ranokDefault = {
     {src: 'ranok/water_crisp.mp4', from: 0.5, at: 3.133, until: 4.067},
     {src: 'ranok/ball_orig_crisp.mp4', from: 0.5, at: 4.067, until: 5.467},
     // kids_full.mp4 starts at 4.0 s of IMG_4154; kids join one by one
-    {src: 'ranok/kids_full_crisp.mp4', from: 0.8, at: 5.467, until: 7.733},   // 1st: daughter runs in (~5.5 s)
+    {src: 'ranok/kids_full_crisp.mp4', from: 0.8, at: 5.467, until: 7.733},   // 1st: youngest son runs in (~5.5 s)
     {src: 'ranok/kids_full_crisp.mp4', from: 7.3, at: 7.733, until: 9.233},   // 2nd: boy in yellow (~11.5 s)
     {src: 'ranok/kids_full_crisp.mp4', from: 12.3, at: 9.233, until: 10.733}, // 3rd: boy in black (~16.5 s)
     {src: 'ranok/kids_full_crisp.mp4', from: 16.4, at: 10.733, until: 16.433}, // 4th: boy in white (~20.5 s), heart
