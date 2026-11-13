@@ -4,6 +4,7 @@ import {
   registerRoot, Composition, AbsoluteFill, OffthreadVideo, Sequence, Audio,
   staticFile, useVideoConfig,
 } from 'remotion';
+import {Mama, mamaDefault, mamaDuration, MAMA_FPS} from './mama';
 import {Animals, animalsDefault, animalsDuration, ANIMALS_FPS} from './animals';
 
 const FPS = 30;
@@ -79,6 +80,15 @@ const Root = () => (
     durationInFrames={animalsDuration(animalsDefault)}
     defaultProps={animalsDefault}
     calculateMetadata={({props}) => ({durationInFrames: animalsDuration(props)})}
+  />
+  <Composition
+    id="Mama"
+    component={Mama}
+    fps={MAMA_FPS}
+    width={1080}
+    height={1920}
+    durationInFrames={mamaDuration(mamaDefault)}
+    defaultProps={mamaDefault}
   />
   </>
 );
