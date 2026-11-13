@@ -60,10 +60,10 @@ export const Behind = ({question, words, hitAt, freezeFor, zoom, color}) => {
 
         {/* big answer, behind the person (stays in colour on the B&W freeze) */}
         <div style={{position: 'absolute', left: 0, right: 0, top: 250, textAlign: 'center', ...big}}>
-          <div style={{fontSize: 214}}>
+          <div style={{fontSize: 200}}>
             {words.filter((w) => w.line === 0).map((w, i) => <span key={i}>{i > 0 && ' '}<Pop at={w.at} style={{transformOrigin: 'center bottom'}}>{w.text}</Pop></span>)}
           </div>
-          <div style={{fontSize: 177, marginTop: 4}}>
+          <div style={{fontSize: 165, marginTop: 4}}>
             {words.filter((w) => w.line === 1).map((w, i) => <Pop key={i} at={w.at} style={{transformOrigin: 'center bottom'}}>{w.text}</Pop>)}
           </div>
         </div>
