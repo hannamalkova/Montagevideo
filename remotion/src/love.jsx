@@ -32,10 +32,11 @@ export const loveDefault = {
     {src: 'r_jump_lv_dk', until: 16.635, no: 'а сама не можеш?!', yes: 'давай допоможу'},
     {src: 'd_twirl_lv_dk', until: 18.318, no: 'знову ти зі своїми емоціями', yes: 'я тебе чую'},
     {src: 's7_lv_dk', until: 20.002, no: 'не лізь, не твоя справа!', yes: 'ми команда'},
+    {src: 'end_lv_dk', from: 0.6, until: 22.2, one: 'і це найдорожчий подарунок 🤍'},   // walking together along the sea
   ],
   // music: null = silent export (user will add her own track). music_ext.wav was the reference track extended.
   music: null,
-  duration: 20.002,
+  duration: 22.2,
 };
 export const loveDuration = (p) => f(p.duration);
 
@@ -51,6 +52,13 @@ const Strike = ({children}) => {
   );
 };
 
+const FadeUp = ({children}) => {
+  const fr = useCurrentFrame();
+  const o = interpolate(fr, [3, 12], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const y = interpolate(fr, [3, 14], [16, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  return <div style={{opacity: o, transform: `translateY(${y}px)`}}>{children}</div>;
+};
+
 export const Love = ({hook, shots, music}) => {
   let prev = 0;
   const base = {position: 'absolute', left: 50, right: 50, textAlign: 'center', color: 'white', textShadow: shadow, fontFamily: 'Montserrat'};
@@ -62,8 +70,13 @@ export const Love = ({hook, shots, music}) => {
           background: 'radial-gradient(ellipse 70% 50% at 50% 50%, rgba(0,0,0,0.32), rgba(0,0,0,0))'}} />;
         return (
           <Sequence key={i} from={f(at)} durationInFrames={f(s.until) - f(at)}>
-            <OffthreadVideo src={staticFile(`love/${s.src}.mp4`)} startFrom={f(0.1)} muted />
+            <OffthreadVideo src={staticFile(`love/${s.src}.mp4`)} startFrom={f(s.from ?? 0.1)} muted />
             {band}
+            {s.one && (
+              <div style={{...base, top: TEXT_TOP + 30, fontFamily: 'Montserrat, "Noto Color Emoji"', fontWeight: 600, fontSize: 54}}>
+                <FadeUp>{s.one}</FadeUp>
+              </div>
+            )}
             {s.no && (
               <div style={{...base, top: TEXT_TOP}}>
                 <div style={{fontWeight: 400, fontSize: 50}}><Strike>{s.no}</Strike></div>
