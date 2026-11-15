@@ -4,6 +4,7 @@ import {
   registerRoot, Composition, AbsoluteFill, OffthreadVideo, Sequence, Audio,
   staticFile, useVideoConfig,
 } from 'remotion';
+import {Gym, gymDefault, gymDuration, GYM_FPS} from './gym';
 import {Thanks, thanksDefault, thanksDuration, THANKS_FPS} from './thanks';
 import {Behind, behindDefault, behindDuration, BEHIND_FPS} from './behind';
 import {Ranok, ranokDefault, ranokDuration, RANOK_FPS} from './ranok';
@@ -119,6 +120,15 @@ const Root = () => (
     height={1920}
     durationInFrames={thanksDuration(thanksDefault)}
     defaultProps={thanksDefault}
+  />
+  <Composition
+    id="Gym"
+    component={Gym}
+    fps={GYM_FPS}
+    width={1080}
+    height={1920}
+    durationInFrames={gymDuration(gymDefault)}
+    defaultProps={gymDefault}
   />
   </>
 );
