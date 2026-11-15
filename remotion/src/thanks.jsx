@@ -12,22 +12,23 @@ const shadow = '0 2px 6px rgba(0,0,0,0.45), 0 0 18px rgba(0,0,0,0.25)';
 
 export const thanksDefault = {
   shots: [
-    {src: 'hook', from: 0.0, until: g(6)},       // you walk in and show "Ми вдячні" (hang1 turn-around shot removed)
-    {src: 'hang2', from: 0.2, until: g(7)},
-    {src: 'hang3', from: 0.2, until: g(8)},
-    {src: 'hang4', from: 0.2, until: g(9)},
-    {src: 'lines', from: 0.3, until: g(11)},     // drawing the columns
-    {src: 'hand', from: 0.1, until: g(13)},      // close-up: hand writing (music accent at ~8 s)
-    {src: 'dad', from: 0.3, until: g(15)},
-    {src: 'eldest', from: 0.3, until: g(17)},
-    {src: 'green', from: 0.3, until: g(19)},
-    {src: 'small', from: 0.3, until: g(21)},
-    {src: 'momwrite', from: 0.3, until: g(23)},
-    {src: 'smile', from: 0.0, until: 18.2},      // you and the youngest smiling at the camera
+    {src: 'hook', from: 0.0, until: g(6)},       // you walk in and show "Ми вдячні"
+    {src: 'holdup', from: 0.0, until: g(9)},     // holding the poster up on the wardrobe
+    {src: 'fall', from: 0.1, until: g(12)},      // the paper unrolls and falls to the floor
+    {src: 'smooth', from: 0.0, until: g(14)},    // smoothing / pressing it on
+    {src: 'lines', from: 0.3, until: g(16)},     // drawing the columns
+    {src: 'hand', from: 0.1, until: g(18)},      // close-up: hand writing (on the music accent)
+    {src: 'dad', from: 0.3, until: g(20)},
+    {src: 'eldest', from: 0.3, until: g(22)},
+    {src: 'green', from: 0.3, until: g(24)},
+    {src: 'small', from: 0.3, until: g(26)},
+    {src: 'momwrite', from: 0.3, until: g(28)},
+    {src: 'smile', from: 0.0, until: 21.6},      // you and the youngest smiling at the camera
   ],
   hookUntil: g(6),
-  cta: {text: 'а ви за що вдячні?', from: g(23) + 0.2},
-  duration: 18.2,
+  cta: {text: 'а ви за що вдячні?', from: g(28) + 0.2},
+  // music_ext.wav = reference track with 5 beats (7.98-11.40 s) repeated, so the grid holds
+  duration: 21.6,
 };
 export const thanksDuration = (p) => f(p.duration);
 
@@ -50,7 +51,7 @@ export const Thanks = ({shots, hookUntil, cta}) => {
           </Sequence>
         );
       })}
-      <Audio src={staticFile('thanks/music.wav')} />
+      <Audio src={staticFile('thanks/music_ext.wav')} />
 
       {/* hook: small Light line / big spaced SemiBold word / small Light line */}
       <Sequence durationInFrames={f(hookUntil)}>
