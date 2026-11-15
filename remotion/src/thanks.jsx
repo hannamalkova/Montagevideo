@@ -12,10 +12,10 @@ const shadow = '0 2px 6px rgba(0,0,0,0.45), 0 0 18px rgba(0,0,0,0.25)';
 
 export const thanksDefault = {
   shots: [
-    {src: 'hook', from: 0.0, until: g(6)},       // you walk in and show "Ми вдячні"
-    {src: 'holdup', from: 0.0, until: g(9)},     // holding the poster up on the wardrobe
-    {src: 'fall', from: 0.1, until: g(12)},      // the paper unrolls and falls to the floor
-    {src: 'smooth', from: 0.0, until: g(14)},    // smoothing / pressing it on
+    {src: 'hook', from: 0.5, until: g(5)},       // you show "Ми вдячні" (walk-in trimmed)
+    {src: 'holdup', from: 0.6, until: g(7)},     // poster already up on the wardrobe (turn-around skipped)
+    {src: 'fall2', from: 0.1, until: g(11)},     // the paper unrolls and falls to the floor
+    {src: 'smooth2', from: 0.0, until: g(14)},   // smoothing / pressing it on
     {src: 'lines', from: 0.3, until: g(16)},     // drawing the columns
     {src: 'hand', from: 0.1, until: g(18)},      // close-up: hand writing (on the music accent)
     {src: 'dad', from: 0.3, until: g(20)},
@@ -25,7 +25,7 @@ export const thanksDefault = {
     {src: 'momwrite', from: 0.3, until: g(28)},
     {src: 'smile', from: 0.0, until: 21.6},      // you and the youngest smiling at the camera
   ],
-  hookUntil: g(6),
+  hookUntil: g(5),
   cta: {text: 'а ви за що вдячні?', from: g(28) + 0.2},
   // music_ext.wav = reference track with 5 beats (7.98-11.40 s) repeated, so the grid holds
   duration: 21.6,
