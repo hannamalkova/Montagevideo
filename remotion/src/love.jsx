@@ -19,7 +19,7 @@ const TEXT_TOP = 300;
 export const loveDefault = {
   hook: ['який найдорожчий подарунок', 'тобі зробив твій чоловік?'],
   shots: [
-    {src: 'hook_deep', until: 3.167},   // deeper, higher-contrast grade + light vignette
+    {src: 'hook_light', until: 3.167},  // light grade: +7% contrast, slightly deeper shadows, no vignette
     {src: 's1', until: 5.2, no: 'сама розберешся', yes: 'не переживай, ми все вирішимо'},
     {src: 'r_run2him', until: 6.667, no: 'подивимось', yes: 'я вже придумав, як ми це зробимо'},
     {src: 'r_hands', until: 8.067, no: 'не виноси мені мозок', yes: 'давай поговоримо'},
