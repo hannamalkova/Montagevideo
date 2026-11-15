@@ -8,7 +8,7 @@ const f = (s) => Math.round(s * GYM_FPS);
 // Audio = reference voice-over: 0-4.88 "Фізичні вправи забезпечують ендорфінами...",
 // 4.88-7.34 "Щасливі люди не вбивають своїх чоловіків", then music to 12.3.
 export const gymDefault = {
-  caption: ['Чому насправді дівчата', 'ходять в спортзал :'],
+  caption: ['чому насправді мама 4', 'ходить на тренування?'],
   shots: [
     {src: 'bag', until: 1.2},
     {src: 'row', until: 2.3},
