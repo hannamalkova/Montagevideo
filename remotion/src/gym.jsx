@@ -38,7 +38,7 @@ export const Gym = ({caption, shots}) => {
         );
       })}
       <Audio src={staticFile('gym/audio.wav')} />
-      <div style={{position: 'absolute', left: 60, right: 60, top: 250, textAlign: 'center', color: 'white',
+      <div style={{position: 'absolute', left: 60, right: 60, top: 1250, textAlign: 'center', color: 'white',
         fontFamily: 'Montserrat', fontWeight: 600, fontSize: 60, lineHeight: '74px',
         textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 0 22px rgba(0,0,0,0.35)'}}>
         {caption.map((l, i) => <div key={i}>{l}</div>)}
