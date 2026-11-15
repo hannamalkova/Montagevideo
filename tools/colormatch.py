@@ -25,6 +25,7 @@ for c in clips:
     kk = np.array([k * Lk, k, k])
     gain = 1 + kk * (ts / np.maximum(s, 1e-3) - 1)
     gain = np.clip(gain, 0.85, 1.2)
+    gain[0] = max(gain[0], 1.0)   # never flatten luminance contrast (that read as haze / dirty lens)
     fr = frames(f"{d}/{c}.mp4")
     enc = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{W}x{H}", "-r", "30", "-i", "-",
                             "-c:v", "libx264", "-crf", "15", "-preset", "fast", "-pix_fmt", "yuv420p", f"{d}/{c}{suffix}.mp4"], stdin=subprocess.PIPE)

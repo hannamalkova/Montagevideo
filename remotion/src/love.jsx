@@ -15,28 +15,28 @@ const RED = '#E5262B';
 // (r_run2him IMG_4369, r_hands IMG_5915, r_walk IMG_5908, r_jump IMG_5911).
 const TEXT_TOP = 300;
 
-// Cut times follow the reference edit.
+// Timing: hook 3.47 s, each caption pair 1.88 s, closing shot 2.5 s (all ~0.2-0.3 s longer than the reference).
 export const loveDefault = {
   hook: ['який найдорожчий подарунок', 'тобі зробив твій чоловік?'],
   // clips: horizon levelled (tools/horizon.py + level_apply.py -> *_lv), then the brighter shots
   // pulled toward the user's darker shots (colormatch.py --ref=dark clips -> *_lv_dk)
   shots: [
-    {src: 'hook_light_lv_dk', until: 3.167},
-    {src: 's1_lv_dk', until: 4.850, no: 'сама розберешся', yes: 'не переживай, ми все вирішимо'},
-    {src: 'r_run2him_lv_dk', until: 6.534, no: 'подивимось', yes: 'я вже придумав, як ми це зробимо'},
-    {src: 'r_hands_lv_dk', until: 8.217, no: 'не виноси мені мозок', yes: 'давай поговоримо'},
-    {src: 's4_lv_dk', until: 9.901, no: 'у мене немає на це часу', yes: 'нічого не плануй, у нас побачення'},
-    {src: 'd_lift_lv_dk', until: 11.584, no: 'роби як знаєш', yes: 'я на твоєму боці'},
-    {src: 'r_walk_lv_dk', until: 13.268, no: 'я тобі нічого не обіцяв', yes: 'ти завжди можеш на мене покластися'},
-    {src: 'd_runspin_lv_dk', until: 14.951, no: 'не до тебе зараз', yes: 'я поруч'},
-    {src: 'r_jump_lv_dk', until: 16.635, no: 'а сама не можеш?!', yes: 'давай допоможу'},
-    {src: 'd_twirl_lv_dk', until: 18.318, no: 'знову ти зі своїми емоціями', yes: 'я тебе чую'},
-    {src: 's7_lv_dk', until: 20.002, no: 'не лізь, не твоя справа!', yes: 'ми команда'},
-    {src: 'end_lv_dk', from: 0.6, until: 22.2, one: 'і це найдорожчий подарунок 🤍'},   // walking together along the sea
+    {src: 'hook_light_lv_dk', until: 3.467},
+    {src: 's1_lv_dk', until: 5.351, no: 'сама розберешся', yes: 'не переживай, ми все вирішимо'},
+    {src: 'r_run2him_lv_dk', until: 7.235, no: 'подивимось', yes: 'я вже придумав, як ми це зробимо'},
+    {src: 'r_hands_lv_dk', until: 9.119, no: 'не виноси мені мозок', yes: 'давай поговоримо'},
+    {src: 's4_lv_dk', until: 11.003, no: 'у мене немає на це часу', yes: 'нічого не плануй, у нас побачення'},
+    {src: 'd_lift_lv_dk', until: 12.887, no: 'роби як знаєш', yes: 'я на твоєму боці'},
+    {src: 'r_walk_lv_dk', until: 14.771, no: 'я тобі нічого не обіцяв', yes: 'ти завжди можеш на мене покластися'},
+    {src: 'd_runspin_lv_dk', until: 16.655, no: 'не до тебе зараз', yes: 'я поруч'},
+    {src: 'r_jump_lv_dk', until: 18.539, no: 'а сама не можеш?!', yes: 'давай допоможу'},
+    {src: 'd_twirl_lv_dk', until: 20.423, no: 'знову ти зі своїми емоціями', yes: 'я тебе чую'},
+    {src: 's7_lv_dk', until: 22.307, no: 'не лізь, не твоя справа!', yes: 'ми команда'},
+    {src: 'end_lv_dk', from: 0.6, until: 24.807, one: 'і це найдорожчий подарунок 🤍'},   // walking together along the sea
   ],
   // music: null = silent export (user will add her own track). music_ext.wav was the reference track extended.
   music: null,
-  duration: 22.2,
+  duration: 24.807,
 };
 export const loveDuration = (p) => f(p.duration);
 
