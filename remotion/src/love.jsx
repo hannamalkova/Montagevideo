@@ -18,17 +18,22 @@ const TEXT_TOP = 300;
 // Cut times follow the reference edit.
 export const loveDefault = {
   hook: ['який найдорожчий подарунок', 'тобі зробив твій чоловік?'],
+  // all clips colour-matched with tools/colormatch.py (strength 0.7) -> *_cm.mp4
   shots: [
-    {src: 'hook_light', until: 3.167},  // light grade: +7% contrast, slightly deeper shadows, no vignette
-    {src: 's1', until: 5.2, no: 'сама розберешся', yes: 'не переживай, ми все вирішимо'},
-    {src: 'r_run2him', until: 6.667, no: 'подивимось', yes: 'я вже придумав, як ми це зробимо'},
-    {src: 'r_hands', until: 8.067, no: 'не виноси мені мозок', yes: 'давай поговоримо'},
-    {src: 's4', until: 9.6, no: 'у мене немає на це часу', yes: 'нічого не плануй, у нас побачення'},
-    {src: 'r_walk', until: 11.067, no: 'я тобі нічого не обіцяв', yes: 'ти завжди можеш на мене покластися'},
-    {src: 'r_jump', until: 12.5, no: 'а сама не можеш?!', yes: 'давай допоможу'},
-    {src: 's7', until: 14.39, no: 'не лізь, не твоя справа!', yes: 'ми команда'},
+    {src: 'hook_light_cm', until: 3.167},
+    {src: 's1_cm', until: 4.850, no: 'сама розберешся', yes: 'не переживай, ми все вирішимо'},
+    {src: 'r_run2him_cm', until: 6.534, no: 'подивимось', yes: 'я вже придумав, як ми це зробимо'},
+    {src: 'r_hands_cm', until: 8.217, no: 'не виноси мені мозок', yes: 'давай поговоримо'},
+    {src: 's4_cm', until: 9.901, no: 'у мене немає на це часу', yes: 'нічого не плануй, у нас побачення'},
+    {src: 'd_lift_cm', until: 11.584, no: 'роби як знаєш', yes: 'я на твоєму боці'},
+    {src: 'r_walk_cm', until: 13.268, no: 'я тобі нічого не обіцяв', yes: 'ти завжди можеш на мене покластися'},
+    {src: 'd_runspin_cm', until: 14.951, no: 'не до тебе зараз', yes: 'я поруч'},
+    {src: 'r_jump_cm', until: 16.635, no: 'а сама не можеш?!', yes: 'давай допоможу'},
+    {src: 'd_twirl_cm', until: 18.318, no: 'знову ти зі своїми емоціями', yes: 'я тебе чую'},
+    {src: 's7_cm', until: 20.002, no: 'не лізь, не твоя справа!', yes: 'ми команда'},
   ],
-  duration: 14.39,
+  // music_ext.wav = reference track with two 2.89 s phrases (2.86-8.64) repeated
+  duration: 20.002,
 };
 export const loveDuration = (p) => f(p.duration);
 
@@ -71,7 +76,7 @@ export const Love = ({hook, shots}) => {
           {hook.map((l, i) => <div key={i}>{l}</div>)}
         </div>
       </Sequence>
-      <Audio src={staticFile('love/music.wav')} />
+      <Audio src={staticFile('love/music_ext.wav')} />
     </AbsoluteFill>
   );
 };
