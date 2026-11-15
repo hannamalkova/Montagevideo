@@ -11,7 +11,8 @@ const RED = '#E5262B';
 
 // Captions sit in the sky above the couple: across all shots the highest head is at y≈572
 // (person detector), text block spans ~300-520, so it never covers you.
-// Shots chosen without the tripod in frame (s6b, s2b replace the tripod / too-close shots).
+// Shots: no tripod in frame; close-ups and kisses (hook, s1, s4, s7) alternate with running shots
+// (r_run2him IMG_4369, r_hands IMG_5915, r_walk IMG_5908, r_jump IMG_5911).
 const TEXT_TOP = 300;
 
 // Cut times follow the reference edit.
@@ -20,11 +21,11 @@ export const loveDefault = {
   shots: [
     {src: 'hook', until: 3.167},
     {src: 's1', until: 5.2, no: 'сама розберешся', yes: 'не переживай, ми все вирішимо'},
-    {src: 's2b', until: 6.667, no: 'подивимось', yes: 'я вже придумав, як ми це зробимо'},
-    {src: 's3', until: 8.067, no: 'не виноси мені мозок', yes: 'давай поговоримо'},
+    {src: 'r_run2him', until: 6.667, no: 'подивимось', yes: 'я вже придумав, як ми це зробимо'},
+    {src: 'r_hands', until: 8.067, no: 'не виноси мені мозок', yes: 'давай поговоримо'},
     {src: 's4', until: 9.6, no: 'у мене немає на це часу', yes: 'нічого не плануй, у нас побачення'},
-    {src: 's5', until: 11.067, no: 'я тобі нічого не обіцяв', yes: 'ти завжди можеш на мене покластися'},
-    {src: 's6b', until: 12.5, no: 'а сама не можеш?!', yes: 'давай допоможу'},
+    {src: 'r_walk', until: 11.067, no: 'я тобі нічого не обіцяв', yes: 'ти завжди можеш на мене покластися'},
+    {src: 'r_jump', until: 12.5, no: 'а сама не можеш?!', yes: 'давай допоможу'},
     {src: 's7', until: 14.39, no: 'не лізь, не твоя справа!', yes: 'ми команда'},
   ],
   duration: 14.39,
