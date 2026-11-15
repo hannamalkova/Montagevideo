@@ -14,8 +14,9 @@ export const thanksDefault = {
   shots: [
     {src: 'hook', from: 0.5, until: g(5)},       // you show "Ми вдячні" (walk-in trimmed)
     {src: 'holdup', from: 0.6, until: g(7)},     // poster already up on the wardrobe (turn-around skipped)
-    {src: 'fall2', from: 0.1, until: g(11)},     // the paper unrolls and falls to the floor
-    {src: 'smooth2', from: 0.0, until: g(14)},   // smoothing / pressing it on
+    {src: 'fall2', from: 0.1, until: g(10)},     // the paper unrolls and falls to the floor
+    {src: 'smooth2', from: 0.0, until: g(12)},   // smoothing / pressing it on
+    {src: 'cutbottom', from: 1.0, until: g(14)}, // kneeling, cutting off the bottom (it drops away at the end)
     {src: 'lines', from: 0.3, until: g(16)},     // drawing the columns
     {src: 'hand', from: 0.1, until: g(18)},      // close-up: hand writing (on the music accent)
     {src: 'dad', from: 0.3, until: g(20)},
