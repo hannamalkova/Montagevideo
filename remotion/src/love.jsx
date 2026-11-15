@@ -21,8 +21,8 @@ export const loveDefault = {
   // clips: horizon levelled (tools/horizon.py + level_apply.py -> *_lv), then the brighter shots
   // pulled toward the user's darker shots (colormatch.py --ref=dark clips -> *_lv_dk)
   shots: [
-    {src: 'hook_light_lv_dk', until: 3.467},
-    {src: 's1_lv_dk', until: 5.351, no: 'сама розберешся', yes: 'не переживай, ми все вирішимо'},
+    {src: 'hookD_lv_dk', from: 0.2, until: 3.467},   // he hugs you from behind, you laugh (IMG_4380)
+    {src: 'kiss2_lv_dk', until: 5.351,   /* close kiss against the sky (IMG_4371) */ no: 'сама розберешся', yes: 'не переживай, ми все вирішимо'},
     {src: 'r_run2him_lv_dk', until: 7.235, no: 'подивимось', yes: 'я вже придумав, як ми це зробимо'},
     {src: 'r_hands_lv_dk', until: 9.119, no: 'не виноси мені мозок', yes: 'давай поговоримо'},
     {src: 's4_lv_dk', until: 11.003, no: 'у мене немає на це часу', yes: 'нічого не плануй, у нас побачення'},
