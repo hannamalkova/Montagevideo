@@ -12,8 +12,7 @@ const shadow = '0 2px 6px rgba(0,0,0,0.45), 0 0 18px rgba(0,0,0,0.25)';
 
 export const thanksDefault = {
   shots: [
-    {src: 'hook', from: 0.0, until: g(5)},       // you walk in and show "Ми вдячні"
-    {src: 'hang1', from: 0.2, until: g(6)},      // taping the paper up: quick beat cuts
+    {src: 'hook', from: 0.0, until: g(6)},       // you walk in and show "Ми вдячні" (hang1 turn-around shot removed)
     {src: 'hang2', from: 0.2, until: g(7)},
     {src: 'hang3', from: 0.2, until: g(8)},
     {src: 'hang4', from: 0.2, until: g(9)},
@@ -26,7 +25,7 @@ export const thanksDefault = {
     {src: 'momwrite', from: 0.3, until: g(23)},
     {src: 'smile', from: 0.0, until: 18.2},      // you and the youngest smiling at the camera
   ],
-  hookUntil: g(5),
+  hookUntil: g(6),
   cta: {text: 'а ви за що вдячні?', from: g(23) + 0.2},
   duration: 18.2,
 };
