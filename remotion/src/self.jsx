@@ -6,7 +6,8 @@ import {AbsoluteFill, OffthreadVideo, staticFile, useCurrentFrame, interpolate} 
 // a light-weight aside appearing lower. Blog fonts (CLAUDE.md): Montserrat 600 / 300.
 export const SELF_FPS = 30;
 const f = (s) => Math.round(s * SELF_FPS);
-const shadow = '0 2px 6px rgba(0,0,0,0.45), 0 0 18px rgba(0,0,0,0.25)';
+// stronger shadow: bright window behind the text
+const shadow = '0 2px 4px rgba(0,0,0,0.75), 0 3px 14px rgba(0,0,0,0.6), 0 0 32px rgba(0,0,0,0.45)';
 
 export const selfDefault = {
   headline: ['А отак я б могла', 'виглядати якби', 'не мала дітей'],
