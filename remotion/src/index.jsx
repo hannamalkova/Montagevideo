@@ -4,6 +4,7 @@ import {
   registerRoot, Composition, AbsoluteFill, OffthreadVideo, Sequence, Audio,
   staticFile, useVideoConfig,
 } from 'remotion';
+import {Self, selfDefault, selfDuration, SELF_FPS} from './self';
 import {Love2, love2Default, love2Duration, LOVE2_FPS} from './love2';
 import {Love, loveDefault, loveDuration, LOVE_FPS} from './love';
 import {Gym, gymDefault, gymDuration, GYM_FPS} from './gym';
@@ -149,6 +150,15 @@ const Root = () => (
     height={1920}
     durationInFrames={love2Duration(love2Default)}
     defaultProps={love2Default}
+  />
+  <Composition
+    id="Self"
+    component={Self}
+    fps={SELF_FPS}
+    width={1080}
+    height={1920}
+    durationInFrames={selfDuration(selfDefault)}
+    defaultProps={selfDefault}
   />
   </>
 );
